@@ -8,7 +8,7 @@ import org.zerock.apiserver.domain.Todo;
 import org.zerock.apiserver.dto.PageRequestDTO;
 import org.zerock.apiserver.dto.PageResponseDTO;
 import org.zerock.apiserver.dto.TodoDTO;
-import org.zerock.apiserver.repository.TodoRepository;
+import org.zerock.apiserver.controller.repository.TodoRepository;
 
 import java.util.List;
 import java.util.Optional;

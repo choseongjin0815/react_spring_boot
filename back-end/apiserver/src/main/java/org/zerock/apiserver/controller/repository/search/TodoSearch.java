@@ -1,4 +1,4 @@
-package org.zerock.apiserver.repository.search;
+package org.zerock.apiserver.controller.repository.search;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

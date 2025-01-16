@@ -1,7 +1,6 @@
 package org.zerock.apiserver.repository;
 
 import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +9,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.zerock.apiserver.controller.repository.TodoRepository;
 import org.zerock.apiserver.domain.Todo;
 
 import java.time.LocalDate;
-import java.util.Optional;
 
 @SpringBootTest
 @Log4j2

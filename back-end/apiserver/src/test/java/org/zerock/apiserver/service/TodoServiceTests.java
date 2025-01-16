@@ -33,8 +33,8 @@ public class TodoServiceTests {
 
     @Test
     public void testGetList() {
-        PageRequestDTO pageRequestDTO = PageRequestDTO.builder().build();
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder().page(11).build();
 
         log.info(todoService.getList(pageRequestDTO));
-    }
+     }
 }

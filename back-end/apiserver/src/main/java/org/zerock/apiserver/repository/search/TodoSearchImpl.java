@@ -1,4 +1,4 @@
-package org.zerock.apiserver.controller.repository.search;
+package org.zerock.apiserver.repository.search;
 
 import com.querydsl.jpa.JPQLQuery;
 import lombok.extern.log4j.Log4j2;

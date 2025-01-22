@@ -1603,6 +1603,16 @@
     schema-utils "^4.2.0"
     source-map "^0.7.3"
 
+"@reduxjs/toolkit@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.5.0.tgz"
+  integrity sha512-awNe2oTodsZ6LmRqmkFhtb/KH03hUhxOamEQy411m3Njj3BbFvoBovxo4Q1cBWnV1ErprVj9MlF0UPXkng0eyg==
+  dependencies:
+    immer "^10.0.3"
+    redux "^5.0.1"
+    redux-thunk "^3.1.0"
+    reselect "^5.1.0"
+
 "@rollup/plugin-babel@^5.2.0":
   version "5.3.1"
   resolved "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-5.3.1.tgz"
@@ -1996,6 +2006,14 @@
   dependencies:
     "@types/node" "*"
 
+"@types/hoist-non-react-statics@^3.3.5":
+  version "3.3.6"
+  resolved "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.6.tgz"
+  integrity sha512-lPByRJUer/iN/xa4qpyL0qmL11DqNW81iU/IG1S3uvRUq4oKagz8VCxZjiWkumgt66YT3vOdDgZ0o32sGKtCEw==
+  dependencies:
+    "@types/react" "*"
+    hoist-non-react-statics "^3.3.0"
+
 "@types/html-minifier-terser@^6.0.0":
   version "6.1.0"
   resolved "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-6.1.0.tgz"
@@ -2104,7 +2122,7 @@
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.5.tgz"
   integrity sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==
 
-"@types/react@^18.0.0":
+"@types/react@*", "@types/react@^18.0.0", "@types/react@^18.2.25 || ^19":
   version "18.3.18"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.3.18.tgz"
   integrity sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==
@@ -2176,6 +2194,11 @@
   version "2.0.7"
   resolved "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz"
   integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
+
+"@types/use-sync-external-store@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.6.tgz"
+  integrity sha512-zFDAD+tlpf2r4asuHEj0XH6pY6i0g5NeAHPn+15wk3BV6JA69eERFXC1gyGThDkVa1zCyKr5jox1+2LbV/AMLg==
 
 "@types/ws@^8.5.5":
   version "8.5.13"
@@ -3383,6 +3406,11 @@ cookie-signature@1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz"
   integrity sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==
+
+cookie@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-0.7.2.tgz"
+  integrity sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==
 
 cookie@^1.0.1:
   version "1.0.2"
@@ -5129,6 +5157,13 @@ he@^1.2.0:
   resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
+  integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
+  dependencies:
+    react-is "^16.7.0"
+
 hoopy@^0.1.4:
   version "0.1.4"
   resolved "https://registry.npmjs.org/hoopy/-/hoopy-0.1.4.tgz"
@@ -5303,6 +5338,11 @@ ignore@^5.2.0:
   version "5.3.2"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.3.2.tgz"
   integrity sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==
+
+immer@^10.0.3:
+  version "10.1.1"
+  resolved "https://registry.npmjs.org/immer/-/immer-10.1.1.tgz"
+  integrity sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==
 
 immer@^9.0.7:
   version "9.0.21"
@@ -7952,6 +7992,15 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
+react-cookie@^7.2.2:
+  version "7.2.2"
+  resolved "https://registry.npmjs.org/react-cookie/-/react-cookie-7.2.2.tgz"
+  integrity sha512-e+hi6axHcw9VODoeVu8WyMWyoosa1pzpyjfvrLdF7CexfU+WSGZdDuRfHa4RJgTpfv3ZjdIpHE14HpYBieHFhg==
+  dependencies:
+    "@types/hoist-non-react-statics" "^3.3.5"
+    hoist-non-react-statics "^3.3.2"
+    universal-cookie "^7.0.0"
+
 react-dev-utils@^12.0.1:
   version "12.0.1"
   resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.1.tgz"
@@ -8000,6 +8049,11 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-is@^16.7.0:
+  version "16.13.1"
+  resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+  integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
 react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
@@ -8009,6 +8063,14 @@ react-is@^18.0.0:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
+
+"react-redux@^7.2.1 || ^8.1.3 || ^9.0.0", react-redux@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.npmjs.org/react-redux/-/react-redux-9.2.0.tgz"
+  integrity sha512-ROY9fvHhwOD9ySfrF0wmvu//bKCQ6AeZZq1nJNtbDC+kk5DuSuNX/n6YWYF/SYy7bSba4D4FSz8DJeKY/S/r+g==
+  dependencies:
+    "@types/use-sync-external-store" "^0.0.6"
+    use-sync-external-store "^1.4.0"
 
 react-refresh@^0.11.0, "react-refresh@>=0.10.0 <1.0.0":
   version "0.11.0"
@@ -8087,7 +8149,7 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react@^18.0.0, react@^18.1.0, react@^18.3.1, "react@>= 16", react@>=18:
+"react@^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.9.0 || ^17.0.0 || ^18 || ^19", "react@^18.0 || ^19", react@^18.0.0, react@^18.1.0, react@^18.3.1, "react@>= 16", "react@>= 16.3.0", react@>=18:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
@@ -8144,6 +8206,16 @@ redent@^3.0.0:
   dependencies:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
+
+redux-thunk@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz"
+  integrity sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==
+
+redux@^5.0.0, redux@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/redux/-/redux-5.0.1.tgz"
+  integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
 
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
@@ -8259,6 +8331,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
+
+reselect@^5.1.0:
+  version "5.1.1"
+  resolved "https://registry.npmjs.org/reselect/-/reselect-5.1.1.tgz"
+  integrity sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==
 
 resolve-cwd@^3.0.0:
   version "3.0.0"
@@ -9481,6 +9558,14 @@ unique-string@^2.0.0:
   dependencies:
     crypto-random-string "^2.0.0"
 
+universal-cookie@^7.0.0:
+  version "7.2.2"
+  resolved "https://registry.npmjs.org/universal-cookie/-/universal-cookie-7.2.2.tgz"
+  integrity sha512-fMiOcS3TmzP2x5QV26pIH3mvhexLIT0HmPa3V7Q7knRfT9HG6kTwq02HZGLPw0sAOXrAmotElGRvTLCMbJsvxQ==
+  dependencies:
+    "@types/cookie" "^0.6.0"
+    cookie "^0.7.2"
+
 universalify@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/universalify/-/universalify-0.2.0.tgz"
@@ -9528,6 +9613,11 @@ url-parse@^1.5.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-sync-external-store@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.4.0.tgz"
+  integrity sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

@@ -28,7 +28,7 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 @Log4j2
 @RequestMapping("/api/products")
-public class  ProductController {
+public class ProductController {
 
   private final ProductService productService; //ProductServcie 주입 
   private final CustomFileUtil fileUtil;
@@ -84,8 +84,7 @@ public class  ProductController {
 
   }
 
-  //@PreAuthorize("hasAnyRole('ROLE_USER','ROLE_ADMIN')") //임시로 권한 설정 
-  @PreAuthorize("hasRole('ROLE_ADMIN')")
+  @PreAuthorize("hasAnyRole('ROLE_USER','ROLE_ADMIN')") //임시로 권한 설정 
   @GetMapping("/list")
   public PageResponseDTO<ProductDTO> list(PageRequestDTO pageRequestDTO) {
 

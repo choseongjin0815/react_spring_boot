@@ -1,7 +1,6 @@
 package org.zerock.mallapi.service;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.http.HttpEntity;
@@ -37,7 +36,7 @@ import lombok.extern.log4j.Log4j2;
 
     String email = getEmailFromKakaoAccessToken(accessToken);
     
-    log.info("nickname: " + email );
+    log.info("email: " + email );
     
     Optional<Member> result = memberRepository.findById(email);
     
@@ -94,58 +93,42 @@ import lombok.extern.log4j.Log4j2;
     return buffer.toString();
   }
 
-  private String getEmailFromKakaoAccessToken(String accessToken){
-    
-    String kakaoGetUserURL = "https://kapi.kakao.com/v2/user/me";
-    
-    if(accessToken == null){
-      throw new RuntimeException("Access Token is null");
-    }
-    
-    RestTemplate restTemplate = new RestTemplate();
-    HttpHeaders headers = new HttpHeaders();
-    headers.add("Authorization", "Bearer " + accessToken);
-    headers.add("Content-Type","application/x-www-form-urlencoded");
 
-    HttpEntity<String> entity = new HttpEntity<>(headers);
+  private String getEmailFromKakaoAccessToken(String accessToken) {
 
-    UriComponents uriBuilder = UriComponentsBuilder.
-      fromUriString(kakaoGetUserURL).build();
+      String kakaoGetUserURL = "https://kapi.kakao.com/v2/user/me";
 
-    ResponseEntity<LinkedHashMap> response =  restTemplate.exchange(
-      uriBuilder.toString(), 
-      HttpMethod.GET, 
-      entity, 
-      LinkedHashMap.class);
-      log.info("response:" + response);
-  
-    LinkedHashMap<String, LinkedHashMap> bodyMap = response.getBody();
-    log.info("------------------------------------");
-    log.info("bodyMap : " + bodyMap);
-      // kakaoAccount에서 profile 데이터를 가져옴 (LinkedHashMap으로 변환)
+      if (accessToken == null) {
+          throw new RuntimeException("Access Token is null");
+      }
 
+      RestTemplate restTemplate = new RestTemplate();
+      HttpHeaders headers = new HttpHeaders();
+      headers.add("Authorization", "Bearer " + accessToken);
+      headers.add("Content-Type", "application/x-www-form-urlencoded");
+      HttpEntity<String> entity = new HttpEntity<>(headers);
+      UriComponents uriBuilder = UriComponentsBuilder.
+              fromUriString(kakaoGetUserURL).build();
 
+      ResponseEntity<LinkedHashMap> response = restTemplate.exchange(
+              uriBuilder.toString(),
+              HttpMethod.GET,
+              entity,
+              LinkedHashMap.class);
+      log.info(response);
 
-
-      // 1. bodyMap에서 kakao_account를 가져옵니다.
+      LinkedHashMap<String, LinkedHashMap> bodyMap = response.getBody();
+      // 1. bodyMap에서 kakao_account를 가져옴
+      //
       LinkedHashMap<String, Object> kakaoAccount = bodyMap.get("kakao_account");
 
-// 2. kakaoAccount에서 profile 데이터를 추출합니다.
+      // 2. kakaoAccount에서 profile의 데이터를 가져옴
       LinkedHashMap<String, Object> profile = (LinkedHashMap<String, Object>) kakaoAccount.get("profile");
 
-// 3. profile에서 nickname을 가져옵니다.
+      // 3. profile에서 nickname을 가져옴
       String nickname = (String) profile.get("nickname");
 
       log.info("nickname" + nickname);
-
-      //한글이라 바로 못빼온듯
-//    LinkedHashMap<String, String> kakaoAccount = bodyMap.get("kakao_account");
-//    log.info("kakaoAccount: " + kakaoAccount);
-//    String testname = kakaoAccount.get("nickname");
-//      System.out.println(testname);
-//    log.info("nickname : " + nickname);
-      //한글 닉네임이라 안된듯
-
     return nickname;
-    }
+  }
   }

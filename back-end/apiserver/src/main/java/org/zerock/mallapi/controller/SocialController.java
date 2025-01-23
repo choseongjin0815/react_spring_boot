@@ -24,12 +24,9 @@ public class SocialController {
  
   @GetMapping("/api/member/kakao")
   public Map<String, Object> getMemberFromKakao(String accessToken) {
-
-
-      log.info("=========================================");
+      
       log.info("access Token ");
       log.info(accessToken);
-      log.info("------------------------------------------");
 
       MemberDTO memberDTO = memberService.getKakaoMember(accessToken);
       Map<String, Object> claims = memberDTO.getClaims();

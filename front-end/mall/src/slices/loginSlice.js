@@ -35,7 +35,6 @@ const loginSlice = createSlice({
 
       //{소셜로그인 회원이 사용}
       const payload = action.payload
-      
 
     
       setCookie("member",JSON.stringify(payload), 1) //1일
@@ -57,9 +56,9 @@ const loginSlice = createSlice({
       const payload = action.payload
 
       //닉네임 한글 처리 
-      if(payload.nickname){
-        payload.nickname = encodeURIComponent(payload.nickname)
-      }
+      // if(payload.nickname){
+      //   payload.nickname = encodeURIComponent(payload.nickname)
+      // }
 
       //정상적인 로그인시에만 저장 
       if(!payload.error){
